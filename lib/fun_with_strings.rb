@@ -16,7 +16,17 @@ module FunWithStrings
     count
   end
   def anagram_groups
-    # your code here
+    words = self.gsub(/\W/, ' ').split
+    groups = Hash.new
+    words.each do |word|
+      fingerprint = word.downcase.chars.sort.join
+      if groups.has_key?(fingerprint)
+        groups[fingerprint] << word
+      else
+        groups[fingerprint] = [word]
+      end
+    end
+    groups.values
   end
 end
 
