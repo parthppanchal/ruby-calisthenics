@@ -16,4 +16,5 @@ class JellyBean < Dessert
   def initialize(flavor)
     super(flavor + " jelly bean", 5)
   end
+  attr_accessor :flavor
 end
