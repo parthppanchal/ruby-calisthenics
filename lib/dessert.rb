@@ -17,4 +17,7 @@ class JellyBean < Dessert
     super(flavor + " jelly bean", 5)
   end
   attr_accessor :flavor
+  def delicious?
+    self.name.split[0] != 'licorice'
+  end
 end
