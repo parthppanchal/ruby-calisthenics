@@ -14,6 +14,6 @@ end
 
 class JellyBean < Dessert
   def initialize(flavor)
-    # your code here
+    super(flavor + " jelly bean", 5)
   end
 end
