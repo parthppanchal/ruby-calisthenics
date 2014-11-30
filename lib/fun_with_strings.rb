@@ -4,7 +4,16 @@ module FunWithStrings
     clean_string == clean_string.reverse
   end
   def count_words
-    # your code here
+    words = self.gsub(/\W/, ' ').downcase.split
+    count = Hash.new
+    words.each do |word|
+      if count.has_key?(word)
+        count[word] += 1
+      else
+        count[word] = 1
+      end
+    end
+    count
   end
   def anagram_groups
     # your code here
