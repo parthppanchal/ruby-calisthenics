@@ -5,10 +5,10 @@ class Dessert
   end
   attr_accessor :name, :calories
   def healthy?
-    # your code here
+    self.calories < 200
   end
   def delicious?
-    # your code here
+    true
   end
 end
 
