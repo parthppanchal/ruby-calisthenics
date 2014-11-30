@@ -14,7 +14,11 @@ class RockPaperScissors
   end
 
   def self.tournament_winner(tournament)
-    # YOUR CODE HERE
+    if !tournament[0][0].kind_of?(Array)
+      self.winner(tournament[0], tournament[1])
+    else
+      self.winner(self.tournament_winner(tournament[0]), self.tournament_winner(tournament[1]))
+    end
   end
 
 end
